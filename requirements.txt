@@ -1,4 +1,4 @@
 scikit-learn==1.2.2
-fastapi
+fastapi==0.111.0
 numpy==1.23.5
-uvicorn
+uvicorn==0.30.1
