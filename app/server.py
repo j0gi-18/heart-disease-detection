@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import joblib
 import numpy as np
 
-model = joblib.load("app/knn.joblib")
+model = joblib.load("app/enmb_dtree.joblib")
 
 class_names = np.array(['Healthy', 'Unhealthy'])
 

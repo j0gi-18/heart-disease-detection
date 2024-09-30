@@ -7,7 +7,7 @@ from sklearn.metrics import confusion_matrix, roc_curve, roc_auc_score, accuracy
 import matplotlib.pyplot as plt
 import joblib
 
-data = pd.read_csv("/Users/sagarkumbhar/Documents/heart/heart.csv")
+data = pd.read_csv("j0gi-18/heart-disease-detection/heart.csv")
 
 # Separate features and target variable
 X = data.drop('target', axis=1)
@@ -17,10 +17,10 @@ y = data['target']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # trained models
-model1 = joblib.load('/Users/sagarkumbhar/Documents/heart/trained_models/trained_knn_model.joblib')
-model2 = joblib.load('/Users/sagarkumbhar/Documents/heart/trained_models/trained_svm_model.joblib')
-model3 = joblib.load('/Users/sagarkumbhar/Documents/heart/trained_models/trained_dtree_model.joblib')
-model4 = joblib.load('/Users/sagarkumbhar/Documents/heart/trained_models/trained_rfc_model.joblib')
+model1 = joblib.load('j0gi-18/heart-disease-detection/models/knn_model.joblib')
+model2 = joblib.load('j0gi-18/heart-disease-detection/models/svm_model.joblib')
+model3 = joblib.load('j0gi-18/heart-disease-detection/models/dtree_model.joblib')
+model4 = joblib.load('j0gi-18/heart-disease-detection/models/rfc_model.joblib')
 
 # Make predictions
 y_pred1 = model1.predict(X_test)
